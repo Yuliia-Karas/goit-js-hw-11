@@ -1,1 +1,18 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+
+.search-form {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: aquamarine;
+   }
+
+   .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+   }
