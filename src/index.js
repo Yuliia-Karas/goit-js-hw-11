@@ -1,4 +1,4 @@
-import './sass/index.scss'
+import './sass/index.scss';
 
 import axios from 'axios';
 import Notiflix from 'notiflix';
@@ -16,5 +16,20 @@ const imageType = 'photo';
 const imageOrientation = 'horizontal';
 const safeSearch = 'true';
 
-const URL = 'https://pixabay.com/api/?key=${KEY}&q=${searchImages}&image_type=${imageType}&orientation=${imageOrientation}&safesearch=${safeSearch}&per_page=${perPage}&page=${page}'
+
+async function getResponse(searchImages) {
+    try {
+     const URL =
+       'https://pixabay.com/api/?key=${KEY}&q=${searchImages}&image_type=${imageType}&orientation=${imageOrientation}&safesearch=${safeSearch}&per_page=${perPage}&page=${page}';
+ 
+    const response = await axios.get(URL);
+    if (response.status === 404) {
+      return [];
+      }
+          return await response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
