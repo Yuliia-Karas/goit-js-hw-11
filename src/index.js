@@ -2,11 +2,10 @@ import './sass/index.scss';
 
 
 import Notiflix from 'notiflix';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+
 
 const searchForm = document.querySelector('#search-form');
-const photoGallery = document.querySelector('.gallery');
+
 const loadMoreBtn = document.querySelector('.load-more');
 
 
