@@ -5,8 +5,8 @@
     width: 100%;
     text-align: center;
     position: fixed;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: aquamarine;
    }
 
@@ -15,4 +15,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+   }
+
+   input {
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 2px solid rgb(173, 216, 230);
+    font-size: 14px;
    }

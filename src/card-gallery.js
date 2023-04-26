@@ -32,7 +32,7 @@ const createPhotoCard = item => {
 
 export const insertContent = array => {
     const result = array.reduce((acc, item) => acc + createPhotoCard(item), '');
-    gallery.insertAdjacentElement('beforeend', result);
+    gallery.insertAdjacentHTML('beforeend', result);
 
     let lightbox = new SimpleLightbox('.gallery a');
     lightbox.refresh();

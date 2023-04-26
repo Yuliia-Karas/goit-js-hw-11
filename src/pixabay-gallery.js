@@ -1,8 +1,10 @@
 import axios from 'axios';
 
 const KEY = '35692508-ed297a5167f9400201d2ec2b1';
-const URL =
-  'https://pixabay.com/api/?key=${KEY}&q=${searchImages}&image_type=${imageType}&orientation=${imageOrientation}&safesearch=${safeSearch}&per_page=${perPage}&page=${page}';
+const URL = 'https://pixabay.com/api/';
+
+    
+//   `https://pixabay.com/api/?key=${KEY}&q=${searchImages}&image_type=${imageType}&orientation=${imageOrientation}&safesearch=${safeSearch}&per_page=${perPage}&page=${page}`;
 
 export default class PixabayGallery {
   constructor() {
