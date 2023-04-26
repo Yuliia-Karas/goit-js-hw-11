@@ -54,7 +54,6 @@ const searchImages = async e => {
   }
 };
 
-
 function smoothScroll() {
   window.scrollTo({
     top: 0,
@@ -88,6 +87,5 @@ const onEntry = entries => {
 const observerOptions = {
   rootMargin: '300px',
 };
-
 
 searchForm.addEventListener('submit', searchImages);

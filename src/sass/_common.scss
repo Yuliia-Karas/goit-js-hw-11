@@ -1,25 +1,96 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+    --start-color: rgb(109, 176, 218);
+    --end-color:rgb(217, 232, 241);
+    --duration-time:500ms;
+    --border-style: 2px solid rgb(42, 104, 142);
+    --text-color: rgb(42, 104, 142);
+}
 
+a {
+    text-decoration: none;
+}
 
-.search-form {
+button {
+    cursor: pointer;
+}    
+
+button:hover,
+button:focus {
+    scale: 1.05;
+    transition-duration: var(--duration-time);
+    border: var(--border-style);
+    outline: none;
+}
+
+input,
+button {
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 2px solid rgb(108, 147, 160);
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 2;
+   }
+
+input:focus {
+    border: var(--border-style);
+    outline: none;
+   }
+
+.header-form {
+    z-index: 100;
     width: 100%;
     text-align: center;
     position: fixed;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: aquamarine;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color:rgb(109, 176, 218);
+    background-image: linear-gradient(to bottom,
+                var(--start-color),
+                var(--end-color));
    }
 
-   .gallery{
+.search-form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 600px;
+    height: 50px;
+    }
+
+.gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
    }
 
-   input {
-    border-radius: 4px;
-    padding: 8px 16px;
-    border: 2px solid rgb(173, 216, 230);
-    font-size: 14px;
+.photo-card {
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);}
+
+.photo-card:hover {
+     scale: 1.1;
+    transition-duration: var(--duration-time);
    }
+
+.photo {
+    display: block;
+    width: 360px;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 5px;
+   }
+
+.info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+   }
+
+.info-item {
+    color:var(--text-color);
+   }
+
+   
