@@ -8,7 +8,7 @@ export default class PixabayGallery {
     this.name = '';
     this.page = 1;
     this.perPage = 40;
-    this.totalPage = 0;
+    this.totalPages = 0;
   }
 
   async getResponse() {
@@ -45,7 +45,7 @@ export default class PixabayGallery {
     this.name = newName;
   }
 
-  set setTotalPage(newTotalPages) {
-    this.totalPage = newTotalPages;
+  set setTotalPages(newTotalPages) {
+    this.totalPages = newTotalPages;
   }
 }

@@ -11,12 +11,16 @@ const gallery = document.querySelector('.gallery');
 const endGallery = document.querySelector('.end');
 // const loadMoreBtn = document.querySelector('.load-more');
 
+let observer;
+
 const searchImages = async e => {
   e.preventDefault();
   pixabayGallery.name = input.value.trim();
   pixabayGallery.resetPage();
 
-  const observer = new IntersectionObserver(onEntry, observerOptions);
+  // const observer = new IntersectionObserver(onEntry, observerOptions);
+
+  observer = new IntersectionObserver(onEntry, observerOptions);
 
 
   if (pixabayGallery.name === '') {
@@ -68,7 +72,7 @@ const onEntry = entries => {
       pixabayGallery
         .getResponse()
         .then(response => {
-          if (
+                if (
             pixabayGallery.page > pixabayGallery.totalPages ||
             response.data.totalHits < pixabayGallery.perPage
           ) {
@@ -76,8 +80,10 @@ const onEntry = entries => {
             Notify.info(
               "We're sorry, but you've reached the end of search results."
             );
-          }
-          insertContent(response.data.hits);
+          } else {
+            insertContent(response.data.hits);
+          } 
+          
         })
         .catch(error => console.log(error));
     }
