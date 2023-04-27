@@ -68,12 +68,19 @@ input:focus {
    }
 
 .photo-card {
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);}
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    transition: transform var(--duration-time) ease-out;
+}
 
 .photo-card:hover {
-     scale: 1.1;
-    transition-duration: var(--duration-time);
-   }
+    transform: scale(1.1);
+}
+
+.photo-card:active,
+.photo-card:focus {
+    outline: none;
+    transform: scale(0.9);
+}
 
 .photo {
     display: block;
